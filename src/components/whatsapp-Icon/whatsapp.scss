@@ -13,6 +13,11 @@
   cursor: pointer;
 
   animation: whats 1s ease-in;
+
+  z-index: 100000;
+
+  // background-color: rgb(244 244 244 / 0.8);
+  border-radius: 20px;
 }
 
 @keyframes whats {
