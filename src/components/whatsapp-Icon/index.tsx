@@ -1,11 +1,11 @@
 import "./whatsapp.scss";
-import { BsWhatsapp } from "react-icons/bs";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 export function WhatsIcon() {
   return (
     <>
       <button className="whatsapp">
-        <BsWhatsapp />
+        <IoLogoWhatsapp />
       </button>
     </>
   );

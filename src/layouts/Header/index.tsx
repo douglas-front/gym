@@ -1,5 +1,7 @@
 import './header.scss'
 
+// import imagem from '@/assets'
+
 export function Header() {
 
   
@@ -24,6 +26,7 @@ export function Header() {
           </div>
 
           <div className='bg'></div>
+          
         </div>
       </header>
     );
