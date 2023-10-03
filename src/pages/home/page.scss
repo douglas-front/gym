@@ -1,0 +1,7 @@
+// Eu coloquei esse content-width em variables
+@import "@/variables";
+
+#Home {
+  max-width: $content-witdh;
+  margin: 0 auto;
+}

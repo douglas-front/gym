@@ -1,16 +1,21 @@
-import { Nav } from "../../components/nav"
-import { WhatsIcon } from "../../components/whatsapp-Icon"
-import { Header } from "../../layouts/Header"
-import { Produtos } from "../../layouts/produtos"
+import Navbar from "@/components/Navbar"
 
-export function Home (){
-  return(
+import WhatsappIcon from "@/components/WhatsappIcon"
+
+import "./page.scss"
+
+import Hero from '@/layouts/Hero'
+import Produtos from "@/layouts/Products"
+
+export function Home() {
+  return (
     <>
-      <Nav/>
-      <main>
-        <Header/>
-        <WhatsIcon/>
-        <Produtos/>
+      <Navbar />
+      {/* Aqui tu pode ver que eu coloquei um id só pra formatar o layout da página */}
+      <main id="Home">
+        <Hero />
+        <WhatsappIcon />
+        <Produtos />
       </main>
     </>
   )

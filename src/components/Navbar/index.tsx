@@ -1,11 +1,12 @@
 import { useState } from "react";
 import logo from "../../assets/img/logo.png";
-import "./nav.scss";
+
+import "./style.scss";
 
 import { BiMenuAltRight } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
 
-export function Nav() {
+export default function NavBar() {
   const [classe, setClasse] = useState("");
 
   function adicionarClasse(){
@@ -39,17 +40,13 @@ export function Nav() {
           </li>
         </ul>
 
-        {/* botao mobile */}
         <button className="mobile" onClick={adicionarClasse}>
           <BiMenuAltRight />
         </button>
       </nav>
 
-      {/* div mobile */}
       <div className={`nav-mobile ${classe}`}>
-
         <button className="exit" onClick={adicionarClasse}><AiOutlineClose/></button>
-
         <ul>
           <li className="focus">
             <a href="#">Suplementos</a>
@@ -64,7 +61,6 @@ export function Nav() {
             <a href="#">Sobre</a>
           </li>
         </ul>
-
       </div>
     </>
   );

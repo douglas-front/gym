@@ -1,26 +1,20 @@
 import "./produtos.scss";
 
-import { AiFillHome } from "react-icons/ai";
-import { SlEnergy } from "react-icons/sl";
-import { TbMeat } from "react-icons/tb";
-import { FaHamburger } from "react-icons/fa";
-import { GrAdd } from "react-icons/gr";
+import { useMemo, useState } from "react";
+
 import { FaAngleRight } from "react-icons/fa";
 import { BsCart } from 'react-icons/bs'
 import { BsCartCheck } from 'react-icons/bs'
 
+import Options from "./Options";
 
 import ProductsService from "@/services/products";
-// import { productsAll, creatine, hipercalorico, whey } from "@/services/products";
+
 import { IProduct } from '@/services/products/type'
 
 
-import { useMemo, useState } from "react";
 
-
-
-export function Produtos() {
-
+export default function Produtos() {
   // Nessa const buttons eu não colocaria assim desse jeito, o porquê é nesse objeto Ele pussui nome, icon e uma funcionalidade que essa funcionalidade ela troca os produtos em tipo: creatina, hipercalorico e entre outras, teu código tá um pouco complexo, eu remonendo separar esse button em um componente isolado o buttons elet tem 3 funções o nome, icon e func a gente pode quebrar isso de forma melhor
 
   // Criei esse Attach, porque ele vai ficar responsável por trocar a exibição de produtos. no inicio vai ser nulo
@@ -34,11 +28,11 @@ export function Produtos() {
     return products
   }, [attach])
 
-  const [iconCompras, setIconCompras] = useState(BsCart)
+  // const [iconCompras, setIconCompras] = useState(BsCart)
 
-  const handleIcon = () => {
-    setIconCompras(BsCartCheck)
-  }
+  // const handleIcon = () => {
+  //   setIconCompras(BsCartCheck)
+  // }
 
   const handleProducts = (attach: IProduct["attach"] | null) => {
     setAttach(attach)
@@ -56,45 +50,15 @@ export function Produtos() {
           <FaAngleRight />
         </span>
 
-        <div className="container-aside">
-          <div className="aside-props">
-            <button className="btn-aside-props" onClick={() => handleProducts(null)}>
-              inicio{""}
-              <AiFillHome />
-            </button>
-          </div>
-          <div className="aside-props">
-            <button className="btn-aside-props" onClick={() => handleProducts("creatina")}>
-              Creatina{""}
-              <SlEnergy />
-            </button>
-          </div>
-          <div className="aside-props">
-            <button className="btn-aside-props" onClick={() => handleProducts("whey protein")}>
-              Whey Protein{""}
-              <TbMeat />
-            </button>
-          </div>
-          <div className="aside-props">
-            <button className="btn-aside-props" onClick={() => handleProducts("hipercalorico")}>
-              Hiper Calórico{""}
-              <FaHamburger />
-            </button>
-          </div>
-          <div className="aside-props">
-            <button className="btn-aside-props">
-              Outros{""}
-              <GrAdd />
-            </button>
-          </div>
-        </div>
+        <Options handleProducts={handleProducts} />
+
         <div className="text-produtos">
           <h1>confira nossos produtos</h1>
         </div>
         <div className="container-cards">
           {products.map((card, key) => (
             <div className="card" key={key}>
-              <button className="button-compras" onClick={handleIcon}>{iconCompras}</button>
+              {/* <button className="button-compras" onClick={handleIcon}>{iconCompras}</button> */}
               <div className="text-card">
                 <h1>
                   {card.name.toLocaleUpperCase()} {card.amount}

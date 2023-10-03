@@ -10,5 +10,6 @@ export default defineConfig({
   base: "/gym",
   resolve: {
     alias: [{ find: "@", replacement: path.resolve(__dirname, "src") }],
-  },
+  }
+
 })

@@ -1,105 +1,92 @@
-@import '../../variables_.scss';
+@import "@/variables";
 
-header{
-  display: flex;
-  justify-content: center;
+// As práticas q eu tô usando seguem o BEM, depois dá uma olhada, isso diminui altamente e chance de conflito entra classes
+.Hero {
+  position: relative;
   height: 550px;
   width: 100%;
-  position: relative;
+  padding: 0 32px;
+  margin: 0 auto;
+  margin-top: 32px;
+  border-radius: 20px;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  .container-header{
+  background: url("../../assets/img/weights.jpg") no-repeat center/cover;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  &__content {
+    width: 50%;
+    height: auto;
 
-    width: 80%;
-    height: 80%;
-    background: url('../../assets/img/weights.jpg') no-repeat center/cover;
-
-    margin-top: 2%;
+    text-align: center;
+    color: #fff;
 
     border-radius: 20px;
 
-    position: relative;
+    z-index: 1;
 
-    .text-header{
-      display: flex;
-      flex-direction: column;
-      // justify-content: center;
-      align-items: center;
+    h2 {
+      position: relative;
+      margin-bottom: 1rem;
 
-      z-index: 10;
-
-      h1{
-        text-transform: uppercase;
-        position: relative;
-
-        &::before{
-          content: '';
-          height: 3px;
-          width: 100%;
-          background-color: #fff;
-          position: absolute;
-          bottom: 0;
-          border-radius: 5px;
-        }
-      }
-
-      h1
-      ,p{
-        color: #fff;
-      }
-    }
-    .bg{
-      background-color: rgb(0 0 0 / 0.7);
-      position: absolute;
-      width: 100%;
-      height: 100%;
+      text-transform: uppercase;
+      text-decoration: underline;
     }
 
-    .div-button-header{
-      button{
-        padding: 10px 70px;
+    p {
+      color: #aaa;
+      margin-bottom: 2rem;
+    }
 
-        border-radius: 10px;
-        border: none;
+    button {
+      position: relative;
+      padding: 10px 70px;
 
-        margin-top: 5%;
+      border-radius: 10px;
+      border: none;
 
-        cursor: pointer;
+      cursor: pointer;
+      z-index: 20;
 
-        position: relative;
+      &::before {
+        content: "";
+        width: 0%;
+        height: 100%;
 
-        z-index: 20;
+        position: absolute;
+        left: 0;
+        top: 0;
 
-        &::before{
-          content: '';
-          width: 0%;
-          height: 100%;
+        background-color: $color_1;
 
-          position: absolute;
-          left: 0;
-          top: 0;
+        z-index: -1;
+        transition: all 0.5s;
+      }
 
-          background-color: $color_1;
-
-          z-index: -1;
-
-          transition: all .5s;
-        }
-
-        &:hover::before{
-          width: 100%;
-        }
+      &:hover::before {
+        width: 100%;
       }
     }
   }
+
+  &__background {
+    background-color: rgb(0 0 0 / 0.7);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
 }
 
+// Essa media query tu pode fazer de outro jeito, esse jeito é bem mais intuitivo.
+/* 
+  @media (200px <= width <= 390px) {} 
+  @media (391px <= width <= 450px) {}
+*/
+
 @media screen and (min-width: 200px) and (max-width: 390px) {
-  header{
+  header {
     display: flex;
     justify-content: center;
     // align-items: center;
@@ -107,38 +94,37 @@ header{
     width: 100%;
     position: relative;
     // background-color: red;
-  
-    .container-header{
-  
+
+    .container-header {
       display: flex;
       justify-content: center;
       align-items: center;
-  
+
       width: 90%;
       height: 400px;
-      background: url('../../assets/img/weights.jpg') no-repeat center/cover;
-  
+      background: url("../../assets/img/weights.jpg") no-repeat center/cover;
+
       margin-top: 10%;
-  
+
       border-radius: 20px;
-  
+
       position: relative;
-  
-      .text-header{
+
+      .text-header {
         display: flex;
         flex-direction: column;
         // justify-content: center;
         align-items: center;
-  
+
         z-index: 10;
-  
-        h1{
+
+        h1 {
           text-transform: uppercase;
           position: relative;
           font-size: 21px;
-  
-          &::before{
-            content: '';
+
+          &::before {
+            content: "";
             height: 3px;
             width: 100%;
             background-color: #fff;
@@ -147,55 +133,55 @@ header{
             border-radius: 5px;
           }
         }
-  
-        h1
-        ,p{
+
+        h1,
+        p {
           color: #fff;
         }
-        p{
+        p {
           font-size: 15px;
           text-align: center;
         }
       }
-      .bg{
+      .bg {
         background-color: rgb(0 0 0 / 0.7);
         position: absolute;
         width: 100%;
         height: 100%;
       }
-  
-      .div-button-header{
-        button{
+
+      .div-button-header {
+        button {
           padding: 10px 70px;
-  
+
           border-radius: 10px;
           border: none;
-  
+
           margin-top: 5%;
-  
+
           cursor: pointer;
-  
+
           position: relative;
-  
+
           z-index: 20;
-  
-          &::before{
-            content: '';
+
+          &::before {
+            content: "";
             width: 0%;
             height: 100%;
-  
+
             position: absolute;
             left: 0;
             top: 0;
-  
+
             background-color: $color_1;
-  
+
             z-index: -1;
-  
-            transition: all .5s;
+
+            transition: all 0.5s;
           }
-  
-          &:hover::before{
+
+          &:hover::before {
             width: 100%;
           }
         }
@@ -203,8 +189,9 @@ header{
     }
   }
 }
+
 @media screen and (min-width: 391px) and (max-width: 450px) {
-  header{
+  header {
     display: flex;
     justify-content: center;
     // align-items: center;
@@ -212,38 +199,37 @@ header{
     width: 100%;
     position: relative;
     // background-color: red;
-  
-    .container-header{
-  
+
+    .container-header {
       display: flex;
       justify-content: center;
       align-items: center;
-  
+
       width: 90%;
       height: 500px;
-      background: url('../../assets/img/weights.jpg') no-repeat center/cover;
-  
+      background: url("../../assets/img/weights.jpg") no-repeat center/cover;
+
       margin-top: 10%;
-  
+
       border-radius: 20px;
-  
+
       position: relative;
-  
-      .text-header{
+
+      .text-header {
         display: flex;
         flex-direction: column;
         // justify-content: center;
         align-items: center;
-  
+
         z-index: 10;
-  
-        h1{
+
+        h1 {
           text-transform: uppercase;
           position: relative;
           font-size: 30px;
-  
-          &::before{
-            content: '';
+
+          &::before {
+            content: "";
             height: 3px;
             width: 100%;
             background-color: #fff;
@@ -252,55 +238,55 @@ header{
             border-radius: 5px;
           }
         }
-  
-        h1
-        ,p{
+
+        h1,
+        p {
           color: #fff;
         }
-        p{
+        p {
           font-size: 17px;
           text-align: center;
         }
       }
-      .bg{
+      .bg {
         background-color: rgb(0 0 0 / 0.7);
         position: absolute;
         width: 100%;
         height: 100%;
       }
-  
-      .div-button-header{
-        button{
+
+      .div-button-header {
+        button {
           padding: 10px 70px;
-  
+
           border-radius: 10px;
           border: none;
-  
+
           margin-top: 5%;
-  
+
           cursor: pointer;
-  
+
           position: relative;
-  
+
           z-index: 20;
-  
-          &::before{
-            content: '';
+
+          &::before {
+            content: "";
             width: 0%;
             height: 100%;
-  
+
             position: absolute;
             left: 0;
             top: 0;
-  
+
             background-color: $color_1;
-  
+
             z-index: -1;
-  
-            transition: all .5s;
+
+            transition: all 0.5s;
           }
-  
-          &:hover::before{
+
+          &:hover::before {
             width: 100%;
           }
         }

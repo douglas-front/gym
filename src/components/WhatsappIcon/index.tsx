@@ -1,7 +1,7 @@
-import "./whatsapp.scss";
+import "./style.scss";
 import { IoLogoWhatsapp } from "react-icons/io";
 
-export function WhatsIcon() {
+export default function WhatsappIcon() {
   return (
     <>
       <button className="whatsapp">

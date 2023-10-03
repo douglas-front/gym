@@ -1,4 +1,6 @@
-@import '../../variables_.scss';
+// Os imports das variaveis em variables pode ser feito usando absolute imports "@/variables" ao inves de "../.."
+@import '@/variables';
+
 nav{
   overflow: hidden;
   display: flex;

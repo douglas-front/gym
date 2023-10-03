@@ -1,10 +1,17 @@
-*{
+
+/* Tu pode fazer ao inves de :root, tu pode colocar em variables.scss */
+:root {
+  --section-padding: 32px;
+  --content-width: 1200px;
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
 
-  font-family: 'Poppins';
+  font-family: "Poppins";
 
   overflow-x: hidden;
 }
