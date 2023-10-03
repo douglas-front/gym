@@ -1,7 +1,7 @@
 type brand = 'max titanium' | 'probiotica' | 'integral medica' | 'atp' | 'body action' | 'athletica' | 'optimum' | 'darkness' | 'universal'
 type Attach = "creatina" | "whey protein" | "hipercalorico" | "protein bar" | 'pre treino'
 
-interface Product {
+export interface IProduct {
   attach: Attach,
   brand: brand,
   amount: string,
@@ -11,6 +11,6 @@ interface Product {
   newPrice: string,
 }
 
-type Products = Product[]
+type TProducts = IProduct[]
 
-export default Products
+export default TProducts

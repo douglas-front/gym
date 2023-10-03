@@ -1,4 +1,4 @@
-import Products from "./type";
+import TProducts, { IProduct } from "./type";
 
 import creatine1 from "@/assets/img/creatina/Creatina Double Force 300g Body Action.webp"
 import creatine2 from '@/assets/img/creatina/Creatina Importada Universal.webp'
@@ -38,7 +38,7 @@ export const productsAll = [
     amount: "300g",
     url: creatine1,
     oldPrice: 'R$ 119,90',
-    name:'Creatina Double Force Body Action',
+    name: 'Creatina Double Force Body Action',
     newPrice: 'R$ 99,90'
   },
   {
@@ -48,7 +48,7 @@ export const productsAll = [
     url: creatine2,
     oldPrice: 'R$ 129,90',
     newPrice: 'R$ 119,90',
-    name:'Creatina Importada Universal'
+    name: 'Creatina Importada Universal'
   },
   {
     attach: "protein bar",
@@ -57,7 +57,7 @@ export const productsAll = [
     url: barra1,
     oldPrice: 'R$ 10,50',
     newPrice: 'R$ 7,50',
-    name:'BARRINHA DE PROTEÍNA / COOKIES'
+    name: 'BARRINHA DE PROTEÍNA / COOKIES'
   },
   {
     attach: "protein bar",
@@ -66,7 +66,7 @@ export const productsAll = [
     url: barra2,
     oldPrice: 'R$ 10,50',
     newPrice: 'R$ 7,50',
-    name:'BARRINHA DE PROTEÍNA/ DOCE DE COCO '
+    name: 'BARRINHA DE PROTEÍNA/ DOCE DE COCO '
   },
   {
     attach: "hipercalorico",
@@ -75,7 +75,7 @@ export const productsAll = [
     url: hiper1,
     oldPrice: 'R$ 110,00',
     newPrice: 'R$ 90,00',
-    name:'Hipercalórico Atlhetica/ Chocolate'
+    name: 'Hipercalórico Atlhetica/ Chocolate'
   },
   {
     attach: "hipercalorico",
@@ -84,7 +84,7 @@ export const productsAll = [
     url: hiper2,
     oldPrice: 'R$ 110,00',
     newPrice: 'R$ 90,00',
-    name:'Hipercalórico Atlhetica/ morango'
+    name: 'Hipercalórico Atlhetica/ morango'
   },
   {
     attach: "whey protein",
@@ -93,7 +93,7 @@ export const productsAll = [
     url: whey1,
     oldPrice: 'R$ 150,00',
     newPrice: 'R$ 134,90',
-    name:'100% WHEY REFIL PROBIÓTICA BAUNILHA'
+    name: '100% WHEY REFIL PROBIÓTICA BAUNILHA'
   },
   {
     attach: "whey protein",
@@ -102,7 +102,7 @@ export const productsAll = [
     url: whey2,
     oldPrice: 'R$ 289,90',
     newPrice: 'R$ 279,90',
-    name:'100% WHEY GOLD OPTIMUM/ BAUNILHA'
+    name: '100% WHEY GOLD OPTIMUM/ BAUNILHA'
   },
   {
     attach: "pre treino",
@@ -111,7 +111,7 @@ export const productsAll = [
     url: pre1,
     oldPrice: 'R$ 170,90',
     newPrice: 'R$ 158,00',
-    name:'Pre Treino Évora Darknes/ Limao'
+    name: 'Pre Treino Évora Darknes/ Limao'
   },
   {
     attach: "pre treino",
@@ -120,9 +120,9 @@ export const productsAll = [
     url: pre2,
     oldPrice: 'R$ 82,99',
     newPrice: 'R$ 75,00',
-    name:'BETA HD ATLHETICA/ UVA Com MORANGO '
+    name: 'BETA HD ATLHETICA/ UVA Com MORANGO '
   },
-] as Products;
+] as TProducts;
 
 export const creatine = [
   {
@@ -131,7 +131,7 @@ export const creatine = [
     amount: "300g",
     url: creatine1,
     oldPrice: 'R$ 119,90',
-    name:'Creatina Double Force Body Action',
+    name: 'Creatina Double Force Body Action',
     newPrice: 'R$ 99,90'
   },
   {
@@ -141,7 +141,7 @@ export const creatine = [
     url: creatine2,
     oldPrice: 'R$ 129,90',
     newPrice: 'R$ 119,90',
-    name:'Creatina Importada Universal'
+    name: 'Creatina Importada Universal'
   },
   {
     attach: "creatina",
@@ -150,7 +150,7 @@ export const creatine = [
     url: creatine3,
     oldPrice: 'R$ 129,90',
     newPrice: 'R$ 119,90',
-    name:'Creatina Importada Universal'
+    name: 'Creatina Importada Universal'
   },
   {
     attach: "creatina",
@@ -159,7 +159,7 @@ export const creatine = [
     url: creatine3,
     oldPrice: 'R$ 129,90',
     newPrice: 'R$ 119,90',
-    name:'Creatina Integral'
+    name: 'Creatina Integral'
   },
   {
     attach: "creatina",
@@ -168,7 +168,7 @@ export const creatine = [
     url: creatine4,
     oldPrice: 'R$ 99,90',
     newPrice: 'R$ 89,90',
-    name:'Creatina Max Titanium'
+    name: 'Creatina Max Titanium'
   },
   {
     attach: "creatina",
@@ -177,9 +177,9 @@ export const creatine = [
     url: creatine5,
     oldPrice: 'R$ 129,90',
     newPrice: 'R$ 119,90',
-    name:'Creatina Max Titanium'
+    name: 'Creatina Max Titanium'
   },
-] as Products
+] as TProducts
 
 export const hipercalorico = [
   {
@@ -189,7 +189,7 @@ export const hipercalorico = [
     url: hiper1,
     oldPrice: 'R$ 110,00',
     newPrice: 'R$ 90,00',
-    name:'Hipercalórico Atlhetica/ Chocolate'
+    name: 'Hipercalórico Atlhetica/ Chocolate'
   },
   {
     attach: "hipercalorico",
@@ -198,7 +198,7 @@ export const hipercalorico = [
     url: hiper2,
     oldPrice: 'R$ 110,00',
     newPrice: 'R$ 90,00',
-    name:'Hipercalórico Atlhetica/ morango'
+    name: 'Hipercalórico Atlhetica/ morango'
   },
   {
     attach: "hipercalorico",
@@ -207,7 +207,7 @@ export const hipercalorico = [
     url: hiper3,
     oldPrice: 'R$ 130,00',
     newPrice: 'R$ 126,00',
-    name:'Hipercalórico MAX / morango'
+    name: 'Hipercalórico MAX / morango'
   },
   {
     attach: "hipercalorico",
@@ -216,7 +216,7 @@ export const hipercalorico = [
     url: hiper4,
     oldPrice: 'R$ 130,00',
     newPrice: 'R$ 160,00',
-    name:'Hipercalórico MAX/ baunilha'
+    name: 'Hipercalórico MAX/ baunilha'
   },
   {
     attach: "hipercalorico",
@@ -225,7 +225,7 @@ export const hipercalorico = [
     url: hiper5,
     oldPrice: 'R$ 130,00',
     newPrice: 'R$ 126,00',
-    name:'Hipercalórico MAX/ chocolate'
+    name: 'Hipercalórico MAX/ chocolate'
   },
   {
     attach: "hipercalorico",
@@ -234,7 +234,7 @@ export const hipercalorico = [
     url: hiper6,
     oldPrice: 'R$ 140,00',
     newPrice: 'R$ 126,00',
-    name:'Hipercalórico Atlhetica/ chocolate'
+    name: 'Hipercalórico Atlhetica/ chocolate'
   },
   {
     attach: "hipercalorico",
@@ -243,7 +243,7 @@ export const hipercalorico = [
     url: hiper6,
     oldPrice: 'R$ 140,00',
     newPrice: 'R$ 126,00',
-    name:'Hipercalórico Atlhetica/ baunilha'
+    name: 'Hipercalórico Atlhetica/ baunilha'
   },
   {
     attach: "hipercalorico",
@@ -252,7 +252,7 @@ export const hipercalorico = [
     url: hiper6,
     oldPrice: 'R$ 140,00',
     newPrice: 'R$ 126,00',
-    name:'Hipercalórico Atlhetica/ morango'
+    name: 'Hipercalórico Atlhetica/ morango'
   },
   {
     attach: "hipercalorico",
@@ -261,7 +261,7 @@ export const hipercalorico = [
     url: hiper7,
     oldPrice: 'R$ 150,00',
     newPrice: 'R$ 129,00',
-    name:'Super Gainers Max Titanium/ Baunilha'
+    name: 'Super Gainers Max Titanium/ Baunilha'
   },
   {
     attach: "hipercalorico",
@@ -270,7 +270,7 @@ export const hipercalorico = [
     url: hiper8,
     oldPrice: 'R$ 150,00',
     newPrice: 'R$ 129,00',
-    name:'Super Gainers Max Titanium/ chocolate'
+    name: 'Super Gainers Max Titanium/ chocolate'
   },
   {
     attach: "hipercalorico",
@@ -279,9 +279,9 @@ export const hipercalorico = [
     url: hiper9,
     oldPrice: 'R$ 150,00',
     newPrice: 'R$ 129,00',
-    name:'Super Gainers Max Titanium/ morango'
+    name: 'Super Gainers Max Titanium/ morango'
   },
-] as Products
+] as TProducts
 
 export const whey = [
   {
@@ -291,7 +291,7 @@ export const whey = [
     url: whey1,
     oldPrice: 'R$ 150,00',
     newPrice: 'R$ 134,90',
-    name:'100% WHEY REFIL PROBIÓTICA BAUNILHA'
+    name: '100% WHEY REFIL PROBIÓTICA BAUNILHA'
   },
   {
     attach: "whey protein",
@@ -300,9 +300,29 @@ export const whey = [
     url: whey2,
     oldPrice: 'R$ 289,90',
     newPrice: 'R$ 279,90',
-    name:'100% WHEY GOLD OPTIMUM/ BAUNILHA'
+    name: '100% WHEY GOLD OPTIMUM/ BAUNILHA'
   },
-] as Products
+] as TProducts
+
+class Products {
+  private products: TProducts = [
+   ...creatine,
+   ...hipercalorico,
+   ...whey,
+  ]
+  constructor() { }
+  public getProductsByAttachment(attach: IProduct["attach"]) {
+    const products = this.products.filter(x => x.attach === attach)
+
+    return products
+  }
+
+  public getAll() {
+    return this.products
+  }
+}
+
+export default new Products()
 
 // export const barras = [
 //   {
