@@ -3,26 +3,53 @@ import "./produtos.scss";
 import { useMemo, useState } from "react";
 
 import { FaAngleRight } from "react-icons/fa";
-import { BsCart } from 'react-icons/bs'
-import { BsCartCheck } from 'react-icons/bs'
+// import { BsCart } from 'react-icons/bs'
+// import { BsCartCheck } from 'react-icons/bs'
 
 import Options from "./Options";
 
 import ProductsService from "@/services/products";
 
 import { IProduct } from '@/services/products/type'
-
+import Card from "./Card";
 
 
 export default function Produtos() {
   // Nessa const buttons eu não colocaria assim desse jeito, o porquê é nesse objeto Ele pussui nome, icon e uma funcionalidade que essa funcionalidade ela troca os produtos em tipo: creatina, hipercalorico e entre outras, teu código tá um pouco complexo, eu remonendo separar esse button em um componente isolado o buttons elet tem 3 funções o nome, icon e func a gente pode quebrar isso de forma melhor
+  // const buttons = [
+  //   {
+  //     nome: "inicio",
+  //     icon: <AiFillHome />,
+  //     func: productsAll
+  //   },
+  //   {
+  //     nome: "creatina",
+  //     icon: <SlEnergy />,
+  //     func: creatine
+  //   },
+  //   {
+  //     nome: "whey",
+  //     icon: <TbMeat />,
+  //     func: whey
+  //   },
+  //   {
+  //     nome: "hipercalorico",
+  //     icon: <FaHamburger />,
+  //     func: hipercalorico
+  //   },
+  //   {
+  //     nome: "mais...",
+  //     icon: <GrAdd />,
+  //   },
+  // ];
+
 
   // Criei esse Attach, porque ele vai ficar responsável por trocar a exibição de produtos. no inicio vai ser nulo
   const [attach, setAttach] = useState<IProduct["attach"] | null>(null)
 
   // a questão do uso do useMemo é porqrue o getProductsByAttachment é um método que usa loops, para isso se você der uma olhada na doc do react sobre useMemo o use case perfeito é o useMemo, resumindo oq ele é quando a dependency que é o "attach" que tá no array, ela for diferente da passada ele reecalcula o products.
   const products = useMemo(() => {
-    if(!attach) return ProductsService.getAll()
+    if (!attach) return ProductsService.getAll()
 
     const products = ProductsService.getProductsByAttachment(attach)
     return products
@@ -56,9 +83,8 @@ export default function Produtos() {
           <h1>confira nossos produtos</h1>
         </div>
         <div className="container-cards">
-          {products.map((card, key) => (
+          {/* {products.map((card, key) => (
             <div className="card" key={key}>
-              {/* <button className="button-compras" onClick={handleIcon}>{iconCompras}</button> */}
               <div className="text-card">
                 <h1>
                   {card.name.toLocaleUpperCase()} {card.amount}
@@ -73,7 +99,8 @@ export default function Produtos() {
               </div>
               <img src={card.url} alt={card.attach} loading="lazy" />
             </div>
-          ))}
+          ))} */}
+          {products.map((card, index) => <Card {...card} key={`${card.attach}_${index}`} />)}
         </div>
       </div>
     </section>

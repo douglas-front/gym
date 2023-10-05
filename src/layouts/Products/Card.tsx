@@ -16,16 +16,17 @@ export default function Card({
 }: CardProps) {
   return (
     <div className="Card">
-      {/* <button className="button-compras" onClick={handleIcon}>{iconCompras}</button> */}
+      {/* <button className="Card__shopping-cart" onClick={handleIcon}>{iconCompras}</button> */}
+      <img className="Card__image" src={url} alt={attach} loading="lazy" />
       <div className="Card__info">
-        <h1 className="Card__info__name">{name.toLocaleUpperCase()} {amount}</h1>
-
-        <div className="Card__info__price">
-          <h1>de <span>{oldPrice}</span> por</h1>
-          <h1 className="Card__info__price--discounted">{newPrice}</h1>
-        </div>
+        <h5 className="Card__info__name">{name.toLocaleUpperCase()} {amount}</h5>
+        <hr />
+        <p className="Card__info__price"> 
+          de <span className="Card__info__price--normal">{oldPrice}</span> por {" "}
+          <br />
+          <span className="Card__info__price--discounted">{newPrice}</span>
+        </p>
       </div>
-      <img src={url} alt={attach} loading="lazy" />
     </div>
   )
 }
