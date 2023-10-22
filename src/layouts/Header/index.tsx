@@ -1,5 +1,5 @@
 import './header.scss'
-
+import {motion} from 'framer-motion'
 // import imagem from '@/assets'
 
 export function Header() {
@@ -14,14 +14,39 @@ export function Header() {
 
             <h1>Classic suplementos</h1>
 
-            <div className="p-text">
+            <motion.div 
+            className="p-text"
+            
+            initial={{ translateX: 520}}
+            animate={{ translateX: 1}}
+            transition={{
+             type: "spring",
+             stiffness: 460,
+             damping: 15,
+             delay: 0.1
+           }}
+            >
               <p>confira nossa infinita possibilidades de suplementos</p>
-              <p>promoções , preços baixos para você!</p>
-            </div>
+              <p>promoções e preços baixos para você!</p>
+            </motion.div>
 
-            <div className='div-button-header'>
+            <motion.div
+             className='div-button-header'
+
+             initial={{ translateX: 320}}
+             animate={{ translateX: 1}}
+             transition={{
+              type: "spring",
+              stiffness: 460,
+              damping: 15
+            }}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{
+              scale: 1.1,
+            }}
+             >
               <button>Saiba mais!</button>
-            </div>
+            </motion.div>
 
           </div>
 

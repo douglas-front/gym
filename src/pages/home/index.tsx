@@ -11,6 +11,7 @@ export function Home (){
         <Header/>
         <WhatsIcon/>
         <Produtos/>
+      
       </main>
     </>
   )

@@ -1,32 +1,5 @@
 import Products from "./type";
-
-import creatine1 from "@/assets/img/creatina/Creatina Double Force 300g Body Action.webp"
-import creatine2 from '@/assets/img/creatina/Creatina Importada Universal.webp'
-import creatine3 from '@/assets/img/creatina/Creatina Integral 300g.webp'
-import creatine4 from '@/assets/img/creatina/Creatina Max Titanium 150g.webp'
-import creatine5 from '@/assets/img/creatina/Creatina Max Titanium 300g.webp'
-
-import barra1 from '@/assets/img/barras/BARRINHA DE PROTEÍNA 45G COOKIES INTEGRAL.jpg'
-import barra2 from '@/assets/img/barras/BARRINHA DE PROTEÍNA 45G DOCE DE COCO.png'
-// import barra3 from '@/assets/img/barras/BARRINHA DE PROTEÍNA 45G ROMEU E JULIETA INTEGRAL.jpg'
-// import barra4 from '@/assets/img/barras/BARRINHA DE PROTEÍNA 45G TRUFA DE AVELÃ INTEGRAL.jpg'
-// import barra5 from '@/assets/img/barras/BARRINHA DE PROTEÍNA 45G  LEITE NINHO C AVELÃ INTEGRAL.jpg'
-// import barra6 from '@/assets/img/barras/BARRINHA DE PROTEÍNA 45G  DUO CRONCH.jpg'
-
-import hiper1 from '@/assets/img/hipercalorico/Hipercalórico Atlhetica Chocolate.png'
-import hiper2 from '@/assets/img/hipercalorico/Hipercalórico Atlhetica morango.webp'
-import hiper3 from '@/assets/img/hipercalorico/Hipercalórico MAX Morango 3kg.webp'
-import hiper4 from '@/assets/img/hipercalorico/Hipercalórico Max Baunilha 3kg.png'
-import hiper5 from '@/assets/img/hipercalorico/Hipercalórico Max Chocolate 3kg.png'
-import hiper6 from '@/assets/img/hipercalorico/Hipercalórico Sinister 3kg Chocolate.webp'
-import hiper7 from '@/assets/img/hipercalorico/Super Gainers Max Titanium 3Kg Baunilha.webp'
-import hiper8 from '@/assets/img/hipercalorico/Super Gainers Max Titanium 3Kg chocolate.jpg'
-import hiper9 from '@/assets/img/hipercalorico/Super Gainers Max Titanium 3Kg morango.jpg'
-
-
-
-import whey1 from '@/assets/img/whey/cem WHEY 900G REFIL PROBIÓTICA BAUNILHA.jpg'
-import whey2 from '@/assets/img/whey/cem WHEY GOLD STANDARD OPTIMUM 907G BAUNILHA.jpg'
+import { creatina, bar , hiperc , wheyP} from "./arrays";
 
 import pre1 from '@/assets/img/preTreino/Pre Treino Évora 300g Darknes Limao.jpg'
 import pre2 from '@/assets/img/preTreino/BETA HD 240G UVA C MORANGO ATLHETICA.png'
@@ -36,7 +9,7 @@ export const productsAll = [
     attach: "creatina",
     brand: "body action",
     amount: "300g",
-    url: creatine1,
+    url: creatina[0],
     oldPrice: 'R$ 119,90',
     name:'Creatina Double Force Body Action',
     newPrice: 'R$ 99,90'
@@ -45,7 +18,7 @@ export const productsAll = [
     attach: "creatina",
     brand: "universal",
     amount: "300g",
-    url: creatine2,
+    url: creatina[1],
     oldPrice: 'R$ 129,90',
     newPrice: 'R$ 119,90',
     name:'Creatina Importada Universal'
@@ -54,7 +27,7 @@ export const productsAll = [
     attach: "protein bar",
     brand: "integral medica",
     amount: "45g",
-    url: barra1,
+    url: bar[0],
     oldPrice: 'R$ 10,50',
     newPrice: 'R$ 7,50',
     name:'BARRINHA DE PROTEÍNA / COOKIES'
@@ -63,7 +36,7 @@ export const productsAll = [
     attach: "protein bar",
     brand: "integral medica",
     amount: "45g",
-    url: barra2,
+    url: bar[1],
     oldPrice: 'R$ 10,50',
     newPrice: 'R$ 7,50',
     name:'BARRINHA DE PROTEÍNA/ DOCE DE COCO '
@@ -72,7 +45,7 @@ export const productsAll = [
     attach: "hipercalorico",
     brand: "athletica",
     amount: "2.5kg",
-    url: hiper1,
+    url: hiperc[0],
     oldPrice: 'R$ 110,00',
     newPrice: 'R$ 90,00',
     name:'Hipercalórico Atlhetica/ Chocolate'
@@ -81,7 +54,7 @@ export const productsAll = [
     attach: "hipercalorico",
     brand: "athletica",
     amount: "2.5kg",
-    url: hiper2,
+    url: hiperc[1],
     oldPrice: 'R$ 110,00',
     newPrice: 'R$ 90,00',
     name:'Hipercalórico Atlhetica/ morango'
@@ -90,7 +63,7 @@ export const productsAll = [
     attach: "whey protein",
     brand: "probiotica",
     amount: "900g",
-    url: whey1,
+    url: wheyP[0],
     oldPrice: 'R$ 150,00',
     newPrice: 'R$ 134,90',
     name:'100% WHEY REFIL PROBIÓTICA BAUNILHA'
@@ -99,7 +72,7 @@ export const productsAll = [
     attach: "whey protein",
     brand: "optimum",
     amount: "907g",
-    url: whey2,
+    url: wheyP[1],
     oldPrice: 'R$ 289,90',
     newPrice: 'R$ 279,90',
     name:'100% WHEY GOLD OPTIMUM/ BAUNILHA'
@@ -124,12 +97,13 @@ export const productsAll = [
   },
 ] as Products;
 
+
 export const creatine = [
   {
     attach: "creatina",
     brand: "body action",
     amount: "300g",
-    url: creatine1,
+    url: creatina[0], 
     oldPrice: 'R$ 119,90',
     name:'Creatina Double Force Body Action',
     newPrice: 'R$ 99,90'
@@ -138,16 +112,7 @@ export const creatine = [
     attach: "creatina",
     brand: "universal",
     amount: "300g",
-    url: creatine2,
-    oldPrice: 'R$ 129,90',
-    newPrice: 'R$ 119,90',
-    name:'Creatina Importada Universal'
-  },
-  {
-    attach: "creatina",
-    brand: "universal",
-    amount: "300g",
-    url: creatine3,
+    url: creatina[1],
     oldPrice: 'R$ 129,90',
     newPrice: 'R$ 119,90',
     name:'Creatina Importada Universal'
@@ -156,7 +121,7 @@ export const creatine = [
     attach: "creatina",
     brand: "integral medica",
     amount: "300g",
-    url: creatine3,
+    url: creatina[2],
     oldPrice: 'R$ 129,90',
     newPrice: 'R$ 119,90',
     name:'Creatina Integral'
@@ -165,7 +130,7 @@ export const creatine = [
     attach: "creatina",
     brand: "max titanium",
     amount: "150g",
-    url: creatine4,
+    url: creatina[3],
     oldPrice: 'R$ 99,90',
     newPrice: 'R$ 89,90',
     name:'Creatina Max Titanium'
@@ -174,11 +139,12 @@ export const creatine = [
     attach: "creatina",
     brand: "max titanium",
     amount: "300g",
-    url: creatine5,
+    url: creatina[4],
     oldPrice: 'R$ 129,90',
     newPrice: 'R$ 119,90',
     name:'Creatina Max Titanium'
   },
+  
 ] as Products
 
 export const hipercalorico = [
@@ -186,7 +152,7 @@ export const hipercalorico = [
     attach: "hipercalorico",
     brand: "athletica",
     amount: "2.5kg",
-    url: hiper1,
+    url: hiperc[0],
     oldPrice: 'R$ 110,00',
     newPrice: 'R$ 90,00',
     name:'Hipercalórico Atlhetica/ Chocolate'
@@ -195,7 +161,7 @@ export const hipercalorico = [
     attach: "hipercalorico",
     brand: "athletica",
     amount: "2.5kg",
-    url: hiper2,
+    url: hiperc[1],
     oldPrice: 'R$ 110,00',
     newPrice: 'R$ 90,00',
     name:'Hipercalórico Atlhetica/ morango'
@@ -204,7 +170,7 @@ export const hipercalorico = [
     attach: "hipercalorico",
     brand: "max titanium",
     amount: "3kg",
-    url: hiper3,
+    url: hiperc[2],
     oldPrice: 'R$ 130,00',
     newPrice: 'R$ 126,00',
     name:'Hipercalórico MAX / morango'
@@ -213,7 +179,7 @@ export const hipercalorico = [
     attach: "hipercalorico",
     brand: "max titanium",
     amount: "3kg",
-    url: hiper4,
+    url: hiperc[3],
     oldPrice: 'R$ 130,00',
     newPrice: 'R$ 160,00',
     name:'Hipercalórico MAX/ baunilha'
@@ -222,7 +188,7 @@ export const hipercalorico = [
     attach: "hipercalorico",
     brand: "max titanium",
     amount: "3kg",
-    url: hiper5,
+    url: hiperc[4],
     oldPrice: 'R$ 130,00',
     newPrice: 'R$ 126,00',
     name:'Hipercalórico MAX/ chocolate'
@@ -231,7 +197,7 @@ export const hipercalorico = [
     attach: "hipercalorico",
     brand: "integral medica",
     amount: "3kg",
-    url: hiper6,
+    url: hiperc[5],
     oldPrice: 'R$ 140,00',
     newPrice: 'R$ 126,00',
     name:'Hipercalórico Atlhetica/ chocolate'
@@ -240,7 +206,7 @@ export const hipercalorico = [
     attach: "hipercalorico",
     brand: "integral medica",
     amount: "3kg",
-    url: hiper6,
+    url: hiperc[5],
     oldPrice: 'R$ 140,00',
     newPrice: 'R$ 126,00',
     name:'Hipercalórico Atlhetica/ baunilha'
@@ -249,7 +215,7 @@ export const hipercalorico = [
     attach: "hipercalorico",
     brand: "integral medica",
     amount: "3kg",
-    url: hiper6,
+    url: hiperc[5],
     oldPrice: 'R$ 140,00',
     newPrice: 'R$ 126,00',
     name:'Hipercalórico Atlhetica/ morango'
@@ -258,7 +224,7 @@ export const hipercalorico = [
     attach: "hipercalorico",
     brand: "max titanium",
     amount: "3kg",
-    url: hiper7,
+    url: hiperc[6],
     oldPrice: 'R$ 150,00',
     newPrice: 'R$ 129,00',
     name:'Super Gainers Max Titanium/ Baunilha'
@@ -267,7 +233,7 @@ export const hipercalorico = [
     attach: "hipercalorico",
     brand: "max titanium",
     amount: "3kg",
-    url: hiper8,
+    url: hiperc[7],
     oldPrice: 'R$ 150,00',
     newPrice: 'R$ 129,00',
     name:'Super Gainers Max Titanium/ chocolate'
@@ -276,7 +242,7 @@ export const hipercalorico = [
     attach: "hipercalorico",
     brand: "max titanium",
     amount: "3kg",
-    url: hiper9,
+    url: hiperc[8],
     oldPrice: 'R$ 150,00',
     newPrice: 'R$ 129,00',
     name:'Super Gainers Max Titanium/ morango'
@@ -288,7 +254,7 @@ export const whey = [
     attach: "whey protein",
     brand: "probiotica",
     amount: "900g",
-    url: whey1,
+    url: wheyP[0],
     oldPrice: 'R$ 150,00',
     newPrice: 'R$ 134,90',
     name:'100% WHEY REFIL PROBIÓTICA BAUNILHA'
@@ -297,66 +263,261 @@ export const whey = [
     attach: "whey protein",
     brand: "optimum",
     amount: "907g",
-    url: whey2,
+    url: wheyP[1],
     oldPrice: 'R$ 289,90',
     newPrice: 'R$ 279,90',
     name:'100% WHEY GOLD OPTIMUM/ BAUNILHA'
   },
+  {
+    attach: "whey protein",
+    brand: "athletica",
+    amount: "900g",
+    url: wheyP[2],
+    oldPrice: 'R$ 229,90',
+    newPrice: 'R$ 210,00',
+    name:'BEST GOURMET ATLHETICA/ CHOCOLATE'
+  },
+  {
+    attach: "whey protein",
+    brand: "athletica",
+    amount: "900g",
+    url: wheyP[3],
+    oldPrice: 'R$ 229,90',
+    newPrice: 'R$ 210,00',
+    name:'BEST GOURMET ATLHETICA/ CHOCOLATE '
+  },
+  {
+    attach: "whey protein",
+    brand: "athletica",
+    amount: "900g",
+    url: wheyP[4],
+    oldPrice: 'R$ 119,90',
+    newPrice: 'R$ 110,00',
+    name:'BEST GOURMET+ PERFORMANCE SORTIDAs '
+  },
+  {
+    attach: "whey protein",
+    brand: "darkness",
+    amount: "907g",
+    url: wheyP[5],
+    oldPrice: 'R$ 119,90',
+    newPrice: 'R$ 110,00',
+    name:'CARNIBOL DARKNESS/ CARAMELO '
+  },
+  {
+    attach: "whey protein",
+    brand: "optimum",
+    amount: "900g",
+    url: wheyP[6],
+    oldPrice: 'R$ 289,90',
+    newPrice: 'R$ 279,90',
+    name:'CARNIBOL DARKNESS/ CARAMELO '
+  },
+  {
+    attach: "whey protein",
+    brand: "vitafor",
+    amount: "900g",
+    url: wheyP[7],
+    oldPrice: 'R$ 299,90',
+    newPrice: 'R$ 289,90',
+    name:'Iso Fort Vitafor/ CHOCOLATE  '
+  },
+  {
+    attach: "whey protein",
+    brand: "vitafor",
+    amount: "900g",
+    url: wheyP[8],
+    oldPrice: 'R$ 299,90',
+    newPrice: 'R$ 289,90',
+    name:'Iso Fort Vitafor/ neutro '
+  },
+  {
+    attach: "whey protein",
+    brand: "nutrata",
+    amount: "900g",
+    url: wheyP[9],
+    oldPrice: 'R$ 259,90',
+    newPrice: 'R$ 239,90',
+    name:'Iso Whey Nutrata/ baunilha '
+  },
+  {
+    attach: "whey protein",
+    brand: "nutrata",
+    amount: "900g",
+    url: wheyP[10],
+    oldPrice: 'R$ 259,90',
+    newPrice: 'R$ 239,90',
+    name:'Iso Whey Nutrata/ morango '
+  },
+  {
+    attach: "whey protein",
+    brand: "body action",
+    amount: "900g",
+    url: wheyP[11],
+    oldPrice: 'R$ 179,90',
+    newPrice: 'R$ 149,90',
+    name:'Isolate Definition Body Action/ Baunilha '
+  },
+  {
+    attach: "whey protein",
+    brand: "body action",
+    amount: "900g",
+    url: wheyP[12],
+    oldPrice: 'R$ 179,90',
+    newPrice: 'R$ 149,90',
+    name:'Isolate Definition Body Action/ chocolate '
+  },
+  {
+    attach: "whey protein",
+    brand: "body action",
+    amount: "900g",
+    url: wheyP[13],
+    oldPrice: 'R$ 179,90',
+    newPrice: 'R$ 149,90',
+    name:'Isolate Definition Body Action/ morango '
+  },
+  {
+    attach: "whey protein",
+    brand: "body action",
+    amount: "900g",
+    url: wheyP[14],
+    oldPrice: 'R$ 179,90',
+    newPrice: 'R$ 149,90',
+    name:'Isolate Definition Body Action/ napolitano '
+  },
+  {
+    attach: "whey protein",
+    brand: "profit",
+    amount: "900g",
+    url: wheyP[15],
+    oldPrice: 'R$ 119,90',
+    newPrice: 'R$ 110,00',
+    name:'Isolate Mix Profit/ Morango  '
+  },
+  {
+    attach: "whey protein",
+    brand: "syntha",
+    amount: "900g",
+    url: wheyP[16],
+    oldPrice: 'R$ 319,90',
+    newPrice: 'R$ 299,90',
+    name:'SYNTHA 6 EDGE/ BAUNILHA '
+  },
+  {
+    attach: "whey protein",
+    brand: "syntha",
+    amount: "900g",
+    url: wheyP[17],
+    oldPrice: 'R$ 319,90',
+    newPrice: 'R$ 299,90',
+    name:'SYNTHA 6 EDGE/ CHOCOLATE '
+  },
+  {
+    attach: "whey protein",
+    brand: "max titanium",
+    amount: "900g",
+    url: wheyP[18],
+    oldPrice: 'R$ 199,00',
+    newPrice: 'R$ 185,00',
+    name:'Top Whey 3w Max/ baunilha '
+  },
+  {
+    attach: "whey protein",
+    brand: "max titanium",
+    amount: "900g",
+    url: wheyP[19],
+    oldPrice: 'R$ 199,00',
+    newPrice: 'R$ 185,00',
+    name:'Top Whey 3w Max/ Chocolate '
+  },
+  {
+    attach: "whey protein",
+    brand: "max titanium",
+    amount: "900g",
+    url: wheyP[20],
+    oldPrice: 'R$ 199,00',
+    newPrice: 'R$ 185,00',
+    name:'Top Whey 3w Max/ morango '
+  },
+  {
+    attach: "whey protein",
+    brand: "DCX",
+    amount: "900g",
+    url: wheyP[21],
+    oldPrice: 'R$ 160,00',
+    newPrice: 'R$ 145,00',
+    name:'Whey 3w DCX/ Baunilha'
+  },
+  {
+    attach: "whey protein",
+    brand: "body action",
+    amount: "900g",
+    url: wheyP[22],
+    oldPrice: 'R$ 160,00',
+    newPrice: 'R$ 145,00',
+    name:'Whey 3w Top TASTE/ BAUNILHA '
+  },
+  {
+    attach: "whey protein",
+    brand: "body action",
+    amount: "900g",
+    url: wheyP[23],
+    oldPrice: 'R$ 160,00',
+    newPrice: 'R$ 145,00',
+    name:'Whey 3w Top TASTE/ CHOCOLATE '
+  },
+  {
+    attach: "whey protein",
+    brand: "body action",
+    amount: "900g",
+    url: wheyP[24],
+    oldPrice: 'R$ 160,00',
+    newPrice: 'R$ 145,00',
+    name:'Whey 3w Top TASTE/ MORANGO '
+  },
+  {
+    attach: "whey protein",
+    brand: "DUX",
+    amount: "900g",
+    url: wheyP[25],
+    oldPrice: 'R$ 210,90',
+    newPrice: 'R$ 194,90',
+    name:'Whey Concentrado Dux/ Baunilha '
+  },
+  {
+    attach: "whey protein",
+    brand: "DUX",
+    amount: "900g",
+    url: wheyP[26],
+    oldPrice: 'R$ 210,90',
+    newPrice: 'R$ 194,90',
+    name:'Whey Concentrado Dux/ morango '
+  },
+  {
+    attach: "whey protein",
+    brand: "optimum",
+    amount: "900g",
+    url: wheyP[27],
+    oldPrice: 'R$ 199,90',
+    newPrice: 'R$ 169,90',
+    name:'Whey Gourmet Optimus/ Baunilha'
+  },
+  {
+    attach: "whey protein",
+    brand: "optimum",
+    amount: "900g",
+    url: wheyP[28],
+    oldPrice: 'R$ 199,90',
+    newPrice: 'R$ 169,90',
+    name:'Whey Gourmet Optimus/ Chocolate '
+  },
+  {
+    attach: "whey protein",
+    brand: "",
+    amount: "900g",
+    url: wheyP[29],
+    oldPrice: 'R$ 129,90',
+    newPrice: 'R$ 110,00',
+    name:'Whey RT Pote/ Doce De Leite '
+  },
 ] as Products
-
-// export const barras = [
-//   {
-//     attach: "protein bar",
-//     brand: "integral medica",
-//     amount: "45g",
-//     url: barra1,
-//     oldPrice: 'R$ 10,50',
-//     newPrice: 'R$ 7,50',
-//     name:'BARRINHA DE PROTEÍNA / COOKIES'
-//   },
-//   {
-//     attach: "protein bar",
-//     brand: "integral medica",
-//     amount: "45g",
-//     url: barra2,
-//     oldPrice: 'R$ 10,50',
-//     newPrice: 'R$ 7,50',
-//     name:'BARRINHA DE PROTEÍNA/ DOCE DE COCO '
-//   },
-//   {
-//     attach: "protein bar",
-//     brand: "integral medica",
-//     amount: "45g",
-//     url: barra3,
-//     oldPrice: 'R$ 10,50',
-//     newPrice: 'R$ 7,50',
-//     name:'BARRINHA DE PROTEÍNA / romeu e julieta'
-//   },
-//   {
-//     attach: "protein bar",
-//     brand: "integral medica",
-//     amount: "45g",
-//     url: barra4,
-//     oldPrice: 'R$ 10,50',
-//     newPrice: 'R$ 7,50',
-//     name:'BARRINHA DE PROTEÍNA/ trufa de avelã '
-//   },
-//   {
-//     attach: "protein bar",
-//     brand: "integral medica",
-//     amount: "45g",
-//     url: barra5,
-//     oldPrice: 'R$ 10,50',
-//     newPrice: 'R$ 7,50',
-//     name:'BARRINHA DE PROTEÍNA / leite ninho com avelã'
-//   },
-//   {
-//     attach: "protein bar",
-//     brand: "integral medica",
-//     amount: "45g",
-//     url: barra6,
-//     oldPrice: 'R$ 10,50',
-//     newPrice: 'R$ 7,50',
-//     name:'BARRINHA DE PROTEÍNA/ duo cronch '
-//   },
-// ]

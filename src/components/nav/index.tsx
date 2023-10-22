@@ -5,15 +5,19 @@ import "./nav.scss";
 import { BiMenuAltRight } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
 
+import Car from "@/layouts/Car";
+
+
 export function Nav() {
   const [classe, setClasse] = useState("");
 
-  function adicionarClasse(){
-
-    setClasse('nav_mobile_on')
-
-    if(classe === 'nav_mobile_on'){
-      setClasse('nav_mobile_off')
+  function adicionarClasse() {
+    if (classe === 'nav_mobile_on') {
+      setClasse('nav_mobile_off');
+      document.body.classList.remove('nav-on');
+    } else {
+      setClasse('nav_mobile_on');
+      document.body.classList.add('nav-on');
     }
   }
 
@@ -26,7 +30,7 @@ export function Nav() {
 
         <ul>
           <li className="focus">
-            <a href="#">Suplementos</a>
+            <a href="#Produtos">Suplementos</a>
           </li>
           <li>
             <a href="#">Endereço</a>
@@ -36,6 +40,9 @@ export function Nav() {
           </li>
           <li>
             <a href="#">Sobre</a>
+          </li>
+          <li>
+            <Car/>
           </li>
         </ul>
 
@@ -46,13 +53,13 @@ export function Nav() {
       </nav>
 
       {/* div mobile */}
-      <div className={`nav-mobile ${classe}`}>
+      <div className={`nav-mobile ${classe}`} >
 
         <button className="exit" onClick={adicionarClasse}><AiOutlineClose/></button>
 
         <ul>
           <li className="focus">
-            <a href="#">Suplementos</a>
+            <a href="#Produtos">Suplementos</a>
           </li>
           <li>
             <a href="#">Endereço</a>
@@ -63,9 +70,13 @@ export function Nav() {
           <li>
             <a href="#">Sobre</a>
           </li>
+          <li>
+            <Car/>
+          </li>
         </ul>
 
       </div>
+
     </>
   );
 }

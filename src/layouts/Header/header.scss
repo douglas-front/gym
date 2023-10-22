@@ -32,6 +32,8 @@ header{
 
       z-index: 10;
 
+      height: 200px;
+
       h1{
         text-transform: uppercase;
         position: relative;
@@ -50,6 +52,7 @@ header{
       h1
       ,p{
         color: #fff;
+        text-align: center;
       }
     }
     .bg{
@@ -127,25 +130,36 @@ header{
       .text-header{
         display: flex;
         flex-direction: column;
-        // justify-content: center;
+        justify-content: center;
         align-items: center;
+
+        width: 90%;
+        height: 100%;
   
         z-index: 10;
+
+        // position: relative;
   
         h1{
           text-transform: uppercase;
           position: relative;
           font-size: 21px;
-  
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           &::before{
             content: '';
             height: 3px;
-            width: 100%;
+            width: 80%;
             background-color: #fff;
             position: absolute;
             bottom: 0;
             border-radius: 5px;
           }
+        }
+        p:first-of-type{
+          margin-top: 5%;
         }
   
         h1
@@ -156,6 +170,7 @@ header{
           font-size: 15px;
           text-align: center;
         }
+        
       }
       .bg{
         background-color: rgb(0 0 0 / 0.7);
@@ -166,12 +181,12 @@ header{
   
       .div-button-header{
         button{
-          padding: 10px 70px;
+          padding: 10px 50px;
   
           border-radius: 10px;
           border: none;
   
-          margin-top: 5%;
+          margin-top: 10%;
   
           cursor: pointer;
   
@@ -203,7 +218,7 @@ header{
     }
   }
 }
-@media screen and (min-width: 391px) and (max-width: 450px) {
+@media screen and (min-width: 391px) and (max-width: 479px) {
   header{
     display: flex;
     justify-content: center;
@@ -232,25 +247,32 @@ header{
       .text-header{
         display: flex;
         flex-direction: column;
-        // justify-content: center;
+        justify-content: center;
         align-items: center;
-  
+        width: 90%;
+        height: 100%;
         z-index: 10;
   
         h1{
           text-transform: uppercase;
           position: relative;
           font-size: 30px;
+          display: flex;
+          justify-content: center;
+
   
           &::before{
             content: '';
             height: 3px;
-            width: 100%;
+            width: 90%;
             background-color: #fff;
             position: absolute;
             bottom: 0;
             border-radius: 5px;
           }
+        }
+        p:first-of-type{
+          margin-top: 5%;
         }
   
         h1
@@ -276,7 +298,7 @@ header{
           border-radius: 10px;
           border: none;
   
-          margin-top: 5%;
+          margin-top: 10%;
   
           cursor: pointer;
   

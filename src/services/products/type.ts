@@ -1,4 +1,4 @@
-type brand = 'max titanium' | 'probiotica' | 'integral medica' | 'atp' | 'body action' | 'athletica' | 'optimum' | 'darkness' | 'universal'
+type brand = 'max titanium' | 'probiotica' | 'integral medica' | 'atp' | 'body action' | 'athletica' | 'optimum' | 'darkness' | 'universal' | 'vitafor' | 'nutrata' | 'profit' | 'syntha' | 'DCX' | 'DUX'
 type Attach = "creatina" | "whey protein" | "hipercalorico" | "protein bar" | 'pre treino'
 
 interface Product {

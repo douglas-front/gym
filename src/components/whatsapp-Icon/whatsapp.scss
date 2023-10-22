@@ -1,39 +1,42 @@
-.whatsapp{
+
+.container-icon{
   position: fixed;
   bottom: 5%;
   right: 5%;
-
-  font-size: 50px;
-
-  color: green;
-
-  border: none;
-  background-color: transparent;
-
-  cursor: pointer;
-
-  animation: whats 1s ease-in;
-
+  
   z-index: 100000;
 
-  // background-color: rgb(244 244 244 / 0.8);
-  border-radius: 20px;
-}
+  background-color: #fff;
+  height: 60px;
+  overflow: hidden;
 
-@keyframes whats {
-  0%{
-    transform: translateX(200px);
-  }
-  100%{
-    transform: translate(1);
+  border-radius: 20px;
+  .whatsapp{
+  
+    font-size: 50px;
+  
+    color: green;
+  
+    border: none;
+    background-color: transparent;
+  
+    cursor: pointer;
+  
+  
+  
+    // background-color: rgb(244 244 244 / 0.8);
+    border-radius: 20px;
   }
 }
 
 @media screen and (min-width: 200px) and (max-width: 900px) {
-  .whatsapp{
-    bottom: 2%;
-    right: 5%;
-  
-    font-size: 50px;
+
+  .container-icon{
+    .whatsapp{
+      bottom: 2%;
+      right: 5%;
+      
+      font-size: 50px;
+    }
   }
 }
