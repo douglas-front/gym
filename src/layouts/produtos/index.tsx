@@ -12,9 +12,9 @@ import {BsCart} from 'react-icons/bs'
 
 
 import {productsAll , creatine , hipercalorico , whey} from "@/services/products";
-import { addArray } from "@/services/push";
-import { useState } from "react";
-
+// import { addArray } from "@/services/push";  
+import { useState, useContext } from "react";
+import { CarContext } from "@/Context/CarContext";
 
 
 
@@ -22,7 +22,13 @@ import { useState } from "react";
 
 export function Produtos() {
 
+  const carContext = useContext(CarContext);
+  
+  if (!carContext) {
+    throw new Error("CarContext is not provided");
+  }
 
+  const { addArray } = carContext;
 
   const buttons = [
     {

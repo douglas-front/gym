@@ -47,15 +47,20 @@ export function Nav() {
         </ul>
 
         {/* botao mobile */}
-        <button className="mobile" onClick={adicionarClasse}>
-          <BiMenuAltRight />
-        </button>
+        <div className="nav-mobile-btns">
+          <Car/>
+          <button className="mobile" onClick={adicionarClasse}>
+            <BiMenuAltRight />
+          </button>
+        </div>
+
       </nav>
 
       {/* div mobile */}
       <div className={`nav-mobile ${classe}`} >
 
         <button className="exit" onClick={adicionarClasse}><AiOutlineClose/></button>
+
 
         <ul>
           <li className="focus">
@@ -70,9 +75,7 @@ export function Nav() {
           <li>
             <a href="#">Sobre</a>
           </li>
-          <li>
-            <Car/>
-          </li>
+          
         </ul>
 
       </div>
