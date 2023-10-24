@@ -34,6 +34,7 @@ const Car = () => {
     <>
       <button className='car-button' onClick={addClass}><BsCart/> <span>{arrayBase.length}</span></button>
 
+      
       <div className={`car-shop ${classe}`}>
 
         <button className='close-car' onClick={addClass}><AiOutlineClose/></button>
