@@ -1,0 +1,184 @@
+#About{
+  // background-color: red;
+  width: 100vw;
+  height: 550px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container-about{
+    border-radius: 20px;
+    width: 80%;
+    height: 100%;
+    background: url('../../assets/img/Arnold.webp') no-repeat center/cover;
+    position: relative;
+    z-index: 10;
+
+    .bg{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      background-color: rgb(0 0 0 / 0.6);
+      z-index: -1;
+    }
+
+    .image-about{
+      // margin-top: 5%;
+      // margin-left: 5%;
+      position: relative;
+      
+
+      img{
+        border-radius: 0 0 50% 0;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+      }
+    }
+
+    .text-about{
+      width: 100%;
+      // background-color: rgba(251, 255, 0, 0.151);
+      height: 50%;
+      // height: 100%;
+      display: flex;
+      flex-direction: column;
+      // justify-content: center;
+      align-items: center;
+
+      position: relative;
+      h1{
+        color: #fff;
+        text-transform: uppercase;
+        // text-align: center;
+        font-size: 35px;
+
+        position: relative;
+
+        &::before{
+          content: '';
+          background-color: #fff;
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 5px;
+          border-radius: 10px;
+        }
+      }
+      p{
+        color: #fff;
+        font-size: 17px;
+      }
+      p:first-of-type{
+        margin-top: 1%;
+
+      }
+
+      ul{
+        margin-top: 2%;
+        display: flex;
+        color: #fff;
+        gap: 30px;
+        // width: 100%;
+
+        list-style: circle #fff;
+      }
+
+      :nth-child(6),
+      :nth-child(5){
+        position: absolute;
+        bottom: 2%;
+      }
+      :nth-child(5){
+        left: 28%;
+
+      }
+
+      :nth-child(6){
+        right: 28%;
+      }
+       
+
+    }
+  }
+}
+
+@media screen and (min-width: 200px) and (max-width: 900px) {
+  #About{
+    height: 550px;
+    overflow: hidden;
+  
+    .container-about{
+      width: 90%;
+  
+      .bg{
+        background-color: rgb(0 0 0 / 0.6);
+      }
+  
+      .image-about{
+        // margin-top: 5%;
+        // margin-left: 5%;
+        position: relative;
+        
+  
+        img{
+          width: 70px;
+          height: 70px;
+        }
+      }
+  
+      .text-about{
+        width: 100%;
+        height: 80%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+  
+        h1{
+          color: #fff;
+          text-transform: uppercase;
+          text-align: center;
+          margin-left: 1%;
+          font-size: 30px;
+  
+          position: relative;
+  
+          &::before{
+            width: 80%;
+          }
+        }
+        p{
+          font-size: 15px;
+          width: 90%;
+          text-align: center;
+        }
+        p:first-of-type{
+          margin-top: 5%;
+  
+        }
+  
+        ul{
+          display: none;
+        }
+  
+        :nth-child(6),
+        :nth-child(5){
+          position: initial;
+          
+        }
+        :nth-child(5){
+          margin-top: 8%;
+        }
+  
+        :nth-child(6){
+          margin-top: 2%;
+        }
+         
+  
+      }
+    }
+  }
+}
