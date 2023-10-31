@@ -3,6 +3,13 @@ import Button from '@/components/button'
 import {IoLogoWhatsapp} from 'react-icons/io'
 import {AiFillInstagram, AiFillFacebook} from 'react-icons/ai'
 export default function SocialMedia(){
+
+
+  function tolink(link: string){
+    window.open(link, "_blank");
+  }
+
+
   return(
     <section id="Social">
       <div className="container-social">
@@ -14,13 +21,13 @@ export default function SocialMedia(){
 
         <div className='cards-social'>
           
-          <div className='card'>
-            <span><IoLogoWhatsapp/></span>
+          <div className='card' onClick={()=> tolink("https://api.whatsapp.com/send?phone=5581984671732&text=Olá!")}>
+            <span><IoLogoWhatsapp/></span> 
             <Button classe='' text='Acessar'/>
           </div>
 
-          <div className='card'>
-            <span><AiFillInstagram/></span>
+          <div className='card' onClick={()=> tolink('http://localhost:5173/gym#Produtos')}>
+             <span><AiFillInstagram/></span>
             <Button classe='' text='Acessar'/>
           </div>
 
