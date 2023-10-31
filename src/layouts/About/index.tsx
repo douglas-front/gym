@@ -22,10 +22,10 @@ export default function About(){
             <p>Nos preocupamos em dar as melhores opções para você!</p>
             
               <ul>
-                <li>°ganho de massa</li>
-                <li>°emagrecimento</li>
-                <li>°energia</li>
-                <li>°força</li>
+                <li>ganho de massa</li>
+                <li>/emagrecimento</li>
+                <li>/energia</li>
+                <li>/força</li>
                 {/* <li>°E muito mais</li> */}
               </ul>
 

@@ -118,7 +118,7 @@ export function Produtos() {
               }}
               whileHover={{ scale: 0.9 }}
               whileTap={{
-                scale: 1,
+                scale: 0.8,
               }}
             >
               <button

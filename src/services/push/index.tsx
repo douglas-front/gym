@@ -41,6 +41,11 @@ const PushCar = () => {
     setAddArray()
   };
 
+  if(arrayBase.length == 0){
+    return(
+      <h1 style={{color: '#fff' , textTransform: 'uppercase' , marginTop: '50%' , marginLeft: '20%'}}>Carrinho vazio :(</h1>
+    )
+  }
   return (
     <>
       {arrayBase.map((compra, key) => (

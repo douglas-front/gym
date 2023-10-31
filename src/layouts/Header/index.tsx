@@ -7,6 +7,18 @@ export function Header() {
 
   
     return (
+      <motion.div 
+      className="p-text"
+      
+      initial={{ translateX: 520}}
+      animate={{ translateX: 1}}
+      transition={{
+       type: "spring",
+       stiffness: 460,
+       damping: 15,
+       delay: 0.1
+     }}
+      >
       <header>
         <div className="container-header">
           
@@ -31,7 +43,7 @@ export function Header() {
               <p>promoções e preços baixos para você!</p>
             </motion.div>
 
-           <Button text='Saiba Mais!'/>
+           <Button text='Saiba Mais!' classe=''/>
            
           </div>
 
@@ -39,5 +51,6 @@ export function Header() {
           
         </div>
       </header>
+      </motion.div>
     );
 }

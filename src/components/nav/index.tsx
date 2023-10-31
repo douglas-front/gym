@@ -58,7 +58,7 @@ export function Nav() {
       </nav>
 
       {/* div mobile */}
-      <div className={`nav-mobile ${classe}`} >
+      <div className={`nav-mobile ${classe}`} onClick={adicionarClasse}>
 
         <button className="exit" onClick={adicionarClasse}><AiOutlineClose/></button>
 
